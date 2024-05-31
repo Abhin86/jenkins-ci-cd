@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: database-secret
+  namespace: app
+type: Opaque
+data:
+  DATABASE_URI: bXlzcWwrcHltc3FsOi8vbXl1c2VyOm15cGFzc3dvcmRANTAuNDMuMjUwLjExNjozMzA2L215ZGI=
+
