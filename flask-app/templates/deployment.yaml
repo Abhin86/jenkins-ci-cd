@@ -72,3 +72,7 @@ spec:
                 secretKeyRef:
                   name: database-secret
                   key: DATABASE_URI
+            - name: REDIS_HOST
+              value: 10.43.118.157
+            - name: REDIS_PORT
+              value: "6379"

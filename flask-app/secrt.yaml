@@ -5,5 +5,4 @@ metadata:
   namespace: app
 type: Opaque
 data:
-  DATABASE_URI: bXlzcWwrcHltc3FsOi8vbXl1c2VyOm15cGFzc3dvcmRANTAuNDMuMjUwLjExNjozMzA2L215ZGI=
-
+  DATABASE_URI: bXlzcWwrcHlteXNxbDovL215dXNlcjpteXBhc3N3b3JkQDEwLjQzLjIyOC42OTozMzA2L215ZGI=
