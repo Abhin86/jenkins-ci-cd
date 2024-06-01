@@ -83,6 +83,23 @@ def ready_for_deploy():
     return 'Not ready'
 
 
+# @app.route('/redis-hits')
+# def redis_hits():
+#     if not is_ready():
+#         return 'Not ready', 404
+#     if 'redis' not in context:
+#         context['redis'] = redis.Redis(host=redis_host, port=redis_port, socket_connect_timeout=5)
+#     cache = context['redis']
+#     retries = 5
+#     while True:
+#         try:
+#             return 'Redis hits ' + str(cache.incr('hits'))
+#         except redis.exceptions.ConnectionError as exc:
+#             if retries == 0:
+#                 return 'No response from redis'
+#             retries -= 1
+#             time.sleep(0.5)
+
 @app.route('/redis-hits')
 def redis_hits():
     if not is_ready():
@@ -93,12 +110,14 @@ def redis_hits():
     retries = 5
     while True:
         try:
-            return 'Redis hits ' + str(cache.incr('hits'))
+            hits = cache.incr('hits')
+            return 'Redis hits ' + str(hits)
         except redis.exceptions.ConnectionError as exc:
             if retries == 0:
-                return 'No response from redis'
+                app.logger.error(f'Redis connection failed after {retries} attempts: {exc}')
+                return 'No response from Redis', 500
             retries -= 1
             time.sleep(0.5)
-
+            
 if __name__ == '__main__':
     app.run(host=app_host, port=app_port)
