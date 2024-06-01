@@ -82,8 +82,3 @@ spec:
                 secretKeyRef:
                   name: database-secret
                   key: REDIS_PORT
-            - name: REDIS_PASS
-              valueFrom:
-                secretKeyRef:
-                  name: database-secret
-                  key: REDIS_PASS
