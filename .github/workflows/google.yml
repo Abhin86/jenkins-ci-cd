@@ -48,7 +48,7 @@ jobs:
     #     workload_identity_provider: 'projects/259973560013/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
     #     service_account: 'admin1@sigma-lane-425101-p6.iam.gserviceaccount.com'
 
-    Alternative option - authentication via credentials json
+    #Alternative option - authentication via credentials json
     - id: 'auth'
       uses: 'google-github-actions/auth@v0'
       with:
