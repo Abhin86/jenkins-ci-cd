@@ -75,7 +75,7 @@ jobs:
 
     - name: "Docker auth"
       run: |-
-          gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev --quiet
+        gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev --quiet
     # Build the Docker image
     
     - name: Build
