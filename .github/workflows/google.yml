@@ -70,6 +70,6 @@ jobs:
         ls
         cd flask-app
         # helm upgrade app . -n app
-        helm upgrade my-release ./mychart --set image.repository=$REPOSITORY/$IMAGE --set image.tag=$GITHUB_SHA
+        helm upgrade app . -n app --set image.repository=$REPOSITORY/$IMAGE --set image.tag=$GITHUB_SHA
 
         
