@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: abhin86/flask
+  repository: us-central1-docker.pkg.dev/sigma-lane-425101-p6/flask/flask
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
 
