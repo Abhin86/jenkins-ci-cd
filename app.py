@@ -106,7 +106,7 @@ def redis_hits():
     if not is_ready():
         return 'Not ready', 404
     if 'redis' not in context:
-        context['redis'] = redis.Redis(host=redis_host, port=redis_port, password=redis_pass, socket_connect_timeout=5)
+        context['redis'] = redis.Redis(host=redis_host, port=redis_port, password=redis_pass, socket_connect_timeout=15)
     cache = context['redis']
     retries = 5
     while True:
