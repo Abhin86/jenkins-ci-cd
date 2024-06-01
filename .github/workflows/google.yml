@@ -107,4 +107,6 @@ jobs:
       run: |-
         # replacing the image name in the k8s template
         ls
+        cd flask-app
+        helm upgrade app . -n app
         
