@@ -56,11 +56,6 @@ jobs:
       run: |-
          docker push "$REPOSITORY/$IMAGE:$GITHUB_SHA"
 
-    - name: Wait for approval
-      uses: trstringer/manual-approval@v1
-      with:
-        approvers: abhin86
-        minimum-approvals: 1
   
     - name: Set up Kubectl and helm
       run: |-
