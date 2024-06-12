@@ -72,4 +72,3 @@ jobs:
         # helm upgrade app . -n app
         helm upgrade app . -n app --set image.repository=$REPOSITORY/$IMAGE --set image.tag=$GITHUB_SHA
 
-        
