@@ -9,7 +9,6 @@ env:
   GAR_LOCATION: us-east1 
   GKE_CLUSTER: cluster    
   GKE_ZONE: us-east1-b  
-  # DEPLOYMENT_NAME: gke-test 
   REPOSITORY: us-central1-docker.pkg.dev/sigma-lane-425101-p6/flask 
   IMAGE: flask
 
